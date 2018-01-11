@@ -12,7 +12,7 @@ const state = {
     msg: 'test',
     cn: '测试'
   },
-  userinfo: JSON.parse(sessionStorage.userinfo) || {}
+  userinfo: JSON.parse(sessionStorage.getItem('userinfo')) || {}
 }
 
 export default new Vuex.Store({

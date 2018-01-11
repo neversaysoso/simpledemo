@@ -45,8 +45,9 @@
 }
 </style>
 <script>
-import { mapActions } from "vuex";
 import { getHospitalList } from "@/request";
+import { mapActions } from "vuex";
+
 export default {
   data() {
     return {

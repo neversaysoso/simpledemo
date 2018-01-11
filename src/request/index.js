@@ -1,11 +1,12 @@
 import axios from "axios"
 
 import store from '@/store'
-import { errorFn, baseConfig } from './config'
+import { setToken, errorFn, baseConfig } from './config'
 import { Message } from 'element-ui'
 
 const post = (_url, obj) => axios.post(_url, obj, baseConfig).catch(errorFn)
-const get = (_url, obj) => axios(_url, Object.assign(baseConfig, { params: obj })).catch(errorFn)
+const get = (_url, obj) => axios(_url, { ...baseConfig, params: obj }).catch(errorFn)
+axios.interceptors.request.use(setToken)
 
 //登入登出
 export const signIn = data => post("sign_in", data).then(d => {
