@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-const lazyload = (name) => (resolve) => require([`@/components/${name}`], resolve)
+const lazyload = (name) => () => import(`@/components/${name}`)
 
 Vue.use(Router)
 

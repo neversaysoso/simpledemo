@@ -11,7 +11,7 @@
 ## download tesla-ui
 
 ```bash
-cnpm i @cnpm/tesla-ui --save -registry=http://192.168.0.129:7001
+cnpm i @cnpm/tesla-ui --save --registry=http://192.168.0.129:7001
 ```
 
 ## DOCS
