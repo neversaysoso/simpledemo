@@ -7,8 +7,6 @@
           <br/>
           route.query: username:{{$route.query.username}},password:{{$route.query.password}}
           <br/>
-          666
-          <br/>
           <el-form class="loginform" ref="form" style="width:200px;">
             <el-form-item label="名字">
               <el-input v-model="realname"></el-input>

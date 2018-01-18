@@ -14,13 +14,14 @@ export const signIn = data => post("sign_in", data).then(d => {
   if (d.data.code == 401) {
     Message.error(d.data.msg)
   } else {
+    //dispatch调用vuex的actions方法 修改用户信息
     store.dispatch('changeUserInfo', d.data);
   }
   return d
 })
 export const signOut = _ => post("sign_out").then(d => {
   store.dispatch('changeUserInfo', {});
-  // store.commit('CHANGE_USER_INFO', {})
+  // 也可以直接用commit调用vuex的mutations方法 store.commit('CHANGE_USER_INFO', {})
 })
 
 //医院应用
