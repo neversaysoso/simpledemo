@@ -14,3 +14,7 @@ download tesla-ui
 cnpm i @cnpm/tesla-ui --save -registry=http://192.168.0.129:7001
 ```
 
+[tesla-ui DOC](http://192.168.0.116/LiuYang/Tesla-UI).
+
+[element-ui DOC](http://element-cn.eleme.io/#/zh-CN/component/i18n).
+
