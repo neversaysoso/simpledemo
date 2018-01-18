@@ -46,7 +46,7 @@
 </style>
 <script>
 import { getHospitalList } from "@/request";
-import { mapActions } from "vuex";
+import { mapActions, mapMutations } from "vuex";
 
 export default {
   data() {
@@ -57,8 +57,10 @@ export default {
   },
   methods: {
     ...mapActions(["changeUserName"]),
+    ...mapMutations(["CHANGE_USER_NAME"]),
     changename() {
-      this.changeUserName(this.realname);
+      // this.changeUserName(this.realname);
+      this.CHANGE_USER_NAME(this.realname);
     },
     getlist() {
       getHospitalList().then(d => {

@@ -5,6 +5,7 @@ import { setToken, errorFn, baseConfig } from './config'
 import { Message } from 'element-ui'
 
 const post = (_url, obj) => axios.post(_url, obj, baseConfig).catch(errorFn)
+//rest符
 const get = (_url, obj) => axios(_url, { ...baseConfig, params: obj }).catch(errorFn)
 axios.interceptors.request.use(setToken)
 
